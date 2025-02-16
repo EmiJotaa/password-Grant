@@ -32,7 +32,6 @@ public class UserService implements UserDetailsService{
 		for (UserDetailsProjection projection: result) {
 			user.addRole(new Role(projection.getRoleId(), projection.getAuthority()));
 		}
-		return (UserDetails) user;
+		return user;
 	}
-
 }
